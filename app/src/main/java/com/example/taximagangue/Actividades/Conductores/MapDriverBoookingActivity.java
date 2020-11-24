@@ -207,7 +207,7 @@ public class MapDriverBoookingActivity extends AppCompatActivity implements OnMa
                 if (mOriginLatLng != null && tCurrentLatLng != null){
                 double distance = getDistanceDetween(mOriginLatLng, tCurrentLatLng); //Metros
 
-                if (distance <= 999) {
+                if (distance >= 1) {
                     //mButtonStartBooking.setEnabled(true);
                     mIsCloseToClient = true;
                     Toast.makeText(MapDriverBoookingActivity.this, "Estas Cerca A La Posicion Del Cliente", Toast.LENGTH_SHORT).show();
@@ -259,8 +259,6 @@ public class MapDriverBoookingActivity extends AppCompatActivity implements OnMa
         DriverLocation.setLongitude(driverLatLng.longitude);
         distance = ClientLocation.distanceTo(DriverLocation);
         return distance;
-
-
     }
 
     private void getClientBooking() {
