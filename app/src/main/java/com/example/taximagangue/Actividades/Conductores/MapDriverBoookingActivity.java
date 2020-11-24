@@ -108,7 +108,8 @@ public class MapDriverBoookingActivity extends AppCompatActivity implements OnMa
     private PolylineOptions mPolylineOptions;
 
     private boolean tFirsTime = true;
-    private boolean mIsCloseToClient = false;
+    private boolean mIsCloseToClient = true;
+   // private boolean mIsCloseToClient = false;
 
 
     LocationCallback tLocationCallback = new LocationCallback() {
